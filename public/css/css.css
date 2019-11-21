@@ -1,0 +1,40 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    background-image: url(images/usps_logo.jpg);
+    background-size: cover;
+}
+
+
+#logo1 {
+    height: 50px;
+}
+#logo2 {
+    height: 50px;
+}
+#logo3 {
+    height: 50px;
+}
+#logo4 {
+    height: 50px;
+}
+#logo5 {
+    height: 50px;
+}
+
+#content-area {
+    max-width: 80%;
+}
+
+#content-area {
+    max-width: 90%;
+}
+
+#content-area {
+    background-color: white;
+    margin: 0 auto;
+}
+
+.nav-full{
+    margin-top: 10%;
+}

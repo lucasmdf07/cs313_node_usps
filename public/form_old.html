@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style></style>
+</head>
+<body>
+    <script>
+        function keaton(){
+        var type = document.getElementById("type").value
+
+        if (type == "lstamped"){
+            document.getElementById("letterMetered").style.display = "none";
+            document.getElementById("largeEnvelopes").style.display = "none";
+            document.getElementById("firstClass").style.display = "none"
+            document.getElementById("letterStamped").style.display = "block";
+        }
+
+        else if (type == "lmetered"){
+            document.getElementById("largeEnvelopes").style.display = "none";
+            document.getElementById("firstClass").style.display = "none"
+            document.getElementById("letterStamped").style.display = "none";
+            document.getElementById("letterMetered").style.display = "block";
+        }
+        else if (type == "flats"){
+            document.getElementById("letterMetered").style.display = "none";
+            document.getElementById("firstClass").style.display = "none"
+            document.getElementById("letterStamped").style.display = "none";
+            document.getElementById("largeEnvelopes").style.display = "block";
+        }
+        else
+            document.getElementById("letterMetered").style.display = "none";
+            document.getElementById("largeEnvelopes").style.display = "none";
+            document.getElementById("letterStamped").style.display = "none";
+            document.getElementById("firstClass").style.display = "block";
+        }
+
+
+
+
+        
+
+    </script>
+    
+    <fieldset>
+        <form method="get" action="/form">
+            <!-- Weight<input type="text" name="weight"><br> -->
+            <select name="type" id="type" onchange="keaton()">
+                <option value="lstamped">Letter (stamped)</option>
+                <option value="lmetered">Letter (metered)</option>
+                <option value="flats">Flats</option>
+                <option value="firstclass">First Class Package Service</option>
+            </select>
+            <select name="rates" id="letterStamped" style="display:none;">
+                <option value=".55">1 - 1.99 oz.</option>
+                <option value=".70">2 - 2.99 oz.</option>
+                <option value=".85">3 - 3.49 oz.</option>
+                <option value="1.00">3.5 oz. or above`</option>
+            </select>
+            <select name="rates" id="letterMetered" style="display:none;">
+                <option value=".50">1 - 1.99 oz.</option>
+                <option value=".65">2 - 2.99 oz.</option>
+                <option value=".80">3 - 3.49 oz.</option>
+                <option value=".95">3.5 oz. or above`</option>
+            </select>
+            <select name="rates" id="largeEnvelopes" style="display:none;">
+                <option value="1.00">under 1oz.</option>
+                <option value="1.15">1 - 1.99 oz.</option>
+                <option value="1.30">2 - 2.99 oz.</option>
+                <option value="1.45">3 - 3.99 oz.</option>
+                <option value="1.60">4 - 4.99 oz.</option>
+                <option value="1.75">5 - 5.99 oz.</option>
+                <option value="1.90">6 - 6.99 oz.</option>
+                <option value="2.05">7 - 7.99 oz.</option>
+                <option value="2.20">8 - 8.99 oz.</option>
+                <option value="2.35">9 - 9.99 oz.</option>
+                <option value="2.50">10 - 10.99 oz.</option>
+                <option value="2.65">11 - 11.99 oz.</option>
+                <option value="2.80">12 - 12.99 oz.</option>
+            </select>
+            <select name="rates" id="firstClass" style="display:none;">
+                <option value="3.66">under 1oz.</option>
+                <option value="3.66">1 - 1.99 oz.</option>
+                <option value="3.66">2 - 2.99 oz.</option>
+                <option value="3.66">3 - 3.99 oz.</option>
+                <option value="4.39">4 - 4.99 oz.</option>
+                <option value="4.39">5 - 5.99 oz.</option>
+                <option value="4.39">6 - 6.99 oz.</option>
+                <option value="4.39">7 - 7.99 oz.</option>
+                <option value="5.19">8 - 8.99 oz.</option>
+                <option value="5.19">9 - 9.99 oz.</option>
+                <option value="5.19">10 - 10.99 oz.</option>
+                <option value="5.19">11 - 11.99 oz.</option>
+                <option value="5.71">12 - 12.99 oz.</option>
+            </select>
+
+            <button type="submit">Calculate</button>
+        </form>
+    </fieldset>
+
+</body>
+</html>

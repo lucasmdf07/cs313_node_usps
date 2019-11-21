@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+    <title>Answer</title>
+</head>
+
+<body>
+
+    <div id="content-area">
+        <div class="nav-full">
+            <a class="global-logo" href="https://www.usps.com/">
+                <img id="logo1" src="https://www.usps.com/global-elements/header/images/utility-header/logo-sb.svg"
+                    alt="Image of USPS.com logo." aria-label="Image of USPS.com logo." />
+            </a>
+        </div>
+
+
+        <% 
+    if (type === "letterStamped") {
+        type = "Letter (Stamped)"
+    } else if (type === "letterMetered") {
+        type = "Letter (Metered)"
+    } else if (type === "leFlats") {
+        type = "Large Envelope (Flats)"
+    } else if (type === "firstClass") {
+        type = "First-Class Package Service—Retail"
+    }
+    %>
+        <div id="header">
+            <header>
+                <h1>USPS Retail Prices</h1>
+            </header>
+        </div>
+        <div>
+            <h3>Here the details of the cost rates</h3>
+        </div>
+        <div class="answer">
+            <p><b> Type of envelope: </b><%= type %> </p>
+            <p><b> Weight: </b><%= weight %> oz </Weight:>
+                <p><b> Price: </b>$<%= price %> </p>
+                <button onclick="window.history.back()">Back</button>
+        </div>
+
+        <br>
+        <br>
+
+
+        <div class="mobile-header">
+            <!-- <a class="mobile-hamburger" href="#"><img id="logo2" src="https://www.usps.com/assets/images/home/hamburger.svg" alt="hamburger menu Icon"></a> -->
+            <a class="mobile-logo" href="https://www.usps.com/"><img id="logo3"
+                    src="https://www.usps.com/assets/images/home/logo_mobile.svg" alt="USPS mobile logo"></a>
+            <a class="mobile-search" href="#"><img id="logo4" src="https://www.usps.com/assets/images/home/search.svg"
+                    alt="Search Icon"></a>
+        </div>
+    </div>
+
+</body>
+
+</html>
