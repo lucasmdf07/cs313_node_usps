@@ -1,3 +1,6 @@
+const API_KEY = '243617934df15cd416cb4fab0608b4ff';
+
+const url = 'https://api.themoviedb.org/3/search/movie?api_key=243617934df15cd416cb4fab0608b4ff'
 
 const searchButton = document.querySelector('#searchSubmit');
 const searchInput = document.querySelector('#inputSearchBox');
