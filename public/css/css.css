@@ -5,29 +5,37 @@ body {
     background-size: cover;
 }
 
-#content-area{
+#content-area {
     background-color: white;
     margin: 0 auto;
     max-width: 90%;
     align-items: center;
 }
 
-#movies-container{
+#movies-searchable {
+    margin-top: 20px;
+}
+
+#movies-container {
     align-content: center;
 }
 
 #logo1 {
     height: 50px;
 }
+
 #logo2 {
     height: 50px;
 }
+
 #logo3 {
     height: 50px;
 }
+
 #logo4 {
     height: 50px;
 }
+
 #logo5 {
     height: 50px;
 }
@@ -45,6 +53,44 @@ body {
     margin: 0 auto;
 }
 
-.nav-full{
+.nav-full {
     margin-top: 10%;
+}
+
+section {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    color: white;
+
+}
+
+
+
+section img {
+    width: 300px;
+    transition: 250ms all;
+}
+
+img:hover {
+    margin-left: 0 40px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.content {
+    border: 3px solid blue;
+    display: none;
+}
+
+.content div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10 px;
+}
+
+.content-display {
+    display: block;
 }
