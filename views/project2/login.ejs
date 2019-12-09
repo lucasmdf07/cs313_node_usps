@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+
+<body class="dark image">
+  <h1 class="header_style2">Please use "lucas" as username and "1234" as password</h1>
+  <div class="login">
+    <form>
+      <div class="form-group">
+        <label class="header_style" for="username">Username</label>
+        <input type="text" class="form-control" id="username">
+      </div>
+      <div class="form-group">
+        <label class="header_style" for="password">Password</label><input type="password" class="form-control" id="password">
+      </div>
+
+      <button type="submit" class="btn btn-primary" id="login">Log in</button>
+    </form>
+  </div>
+
+  <script>
+  $('#login').click(function() {
+    console.log("login")
+    var username = $("#username").val();
+    var password = $("#password").val();
+
+    var params = {
+      username: username,
+      password: password
+    };
+
+    $.post("/login", params, function(result) {
+      if (result && result.success) {
+        $("#status").text("Successfully logged in.");
+      } else {
+        $("#status").text("Error logging in.");
+      }
+    });
+  });
+  </script>
+</body>
+</html>

@@ -14,6 +14,7 @@ body {
 
 #movies-searchable {
     margin-top: 20px;
+    display: flex;
 }
 
 #movies-container {
@@ -59,8 +60,8 @@ body {
 
 section {
     display: flex;
-    width: 100%;
-    overflow-x: auto;
+    width: 90%;
+    /* overflow-x: auto; */
     color: white;
 
 }
@@ -93,4 +94,33 @@ img:hover {
 
 .content-display {
     display: block;
+}
+
+.header_style {
+    color: white;
+  text-shadow: -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+}
+
+.header_style2 {
+    color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  margin-left: 5%;
+}
+
+.search {
+    /* position: absolute; */
+    margin: auto;
+    top: 150px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    /* height: 200px; */
+}
+
+.movie {
+    display: flex;
 }
