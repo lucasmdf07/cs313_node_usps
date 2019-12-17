@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="stylesheets/css.css" />
+  <link rel="stylesheet" href="stylesheets/main.css" />
+  <title> Movie Catalog | Single Page</title>
   <% include ../partials/header.ejs %>
 </head>
 
 <body>
-    <% include ../partials/nav.ejs %>
+      <% include ../partials/nav.ejs %>
   <div class="container">
-    <h1 class="header_style"><span class="glyphicon glyphicon-film"></span> Welcome to the Movie Catalog</h1>
+    <h1 class="header_style"> Movie Catalog</h1>
     <img src="" alt="">
+    <form class="form_style">
+      <div class="form-group">
+        <input type="text" id="inputSearchBox" />
+      </div>
 
-    <p class="header_style">Type the name of the movie in the search box below to see its title image and related movies on Youtube</p>
-
-    <div class="search">
-
-      <form>
-        <div class="form-group">
-          <input type="text" id="inputSearchBox" />
-        </div>
-        
-        <button class="btn btn-primary" type="submit" class="myButton" id="searchSubmit">
-          Search
-        </button>
-      </form>
-    </div>
+      <button type="submit" class="myButton" id="searchSubmit">
+        Search a movie
+      </button>
+    </form>
 
     <div id="movies-searchable"></div>
 
   </div>
 
-  <script src="/js/js.js"></script>
+  <script src="js/js.js"></script>
+  <footer>
+
+  </footer>
 </body>
+
 </html>

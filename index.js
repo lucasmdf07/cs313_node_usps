@@ -8,7 +8,7 @@ const app = express();
 const session = require('express-session')
 
 app.use(session({
-  secret: 'vimeo-secret',
+  secret: 'secret',
   resave: false,
   saveUninitialized: true
 }))
@@ -41,25 +41,6 @@ app.get('/', verifyLogin, (req, res) => {
     })
   })
 
-app.get('/genres/:id', verifyLogin, (req, res) => {
-    getGenre(req.params.id)
-    .then(response => {
-      const data = [];
-      response['data']['data'].forEach(item => {data.push(item)});
-
-      data.forEach(item => {
-          // Creating the poster and background image of dimensions 250 by 375
-          let pictures = item.pictures.uri;
-          item.pictures = "https://i.vimeocdn.com/vod_poster" + pictures.substring(pictures.lastIndexOf("/"));
-
-          // Reducing the description to 40 words
-          item.description = item.description.split(" ").splice(0,40).join(" ") + "...";
-      });
-      res.render('project2/genres', {data: data, selected: req.params.id})
-    })
-    .catch(error => {
-      res.send("fail" + error)
-    })})
 
 app.get('/login', (req, res) => {
   res.render('project2/login')
@@ -70,7 +51,7 @@ app.get('/logout', handleLogout)
 
 function getGenres() {
   try {
-    return axios.get('https://api.vimeo.com/ondemand/genres?access_token=675158fe38a61d2601b865875b53d506&fields=name,canonical')
+    return axios.get('https://www.themoviedb.org/?language=en-US')
   } catch (error) {
     console.error(error)
   }
@@ -78,7 +59,7 @@ function getGenres() {
 
 function getGenre(genre) {
   try {
-    return axios.get('https://api.vimeo.com/ondemand/genres/' + genre + '/pages/?access_token=675158fe38a61d2601b865875b53d506&fields=name,description,link,colors,pictures.uri')
+    return axios.get('')
   } catch (error) {
     console.error(error)
   }

@@ -269,7 +269,7 @@ form {
     }
   } 
 }*/
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   .categories ul li {
     width: 33.33%;
   }
@@ -282,7 +282,7 @@ form {
 @media (max-width: 500px) {
   .categories ul li a .item_desc .category_sprite {
     display: none;
-  }
+  } */
 }
 /*
 Carousel css
@@ -452,18 +452,18 @@ Carousel css
   background-color: transparent !important;
 }
 .navbar .container {
-  width: 95%;
+  width: 100%;
 }
-.navbar .dropdown-menu {
+/* .navbar .dropdown-menu {
   max-height: 150px;
   overflow: scroll;
-}
-.navbar .dropdown-menu > li > a {
+} */
+/* .navbar .dropdown-menu > li > a {
   color: #bbb;
 }
 .navbar .dropdown-menu > li > a:hover {
   color: white;
-}
+} */
 
 .selected {
   top: 10px;
